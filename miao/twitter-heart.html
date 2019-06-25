@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<style>
+    input + label{
+        cursor: pointer;
+        display:block;
+        width: 100px;
+        height:100px;
+        border:1px solid;
+        background-image: url(https://abs.twimg.com/a/1557861269/img/animations/web_heart_animation_edge.png);
+    }
+    input:checked + label{
+        display:block;
+        background-position: -2800px 0;
+        transition:background-position 1s steps(28);
+    }
+    input{
+        display: none;
+    }
+</style>
+
+
+<body>
+    <input type="checkbox" id="check" checked>
+    <label for="check"></label>
+</body>
+</html>

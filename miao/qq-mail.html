@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<style>
+    html,body{
+        height:100%;
+        width: 100%;
+        margin: 0;
+    }
+    div{
+        height: 100%;
+    }
+    header{
+        width:100%;
+        height:150px;
+        border-bottom: 3px solid;
+        background-color: green;
+    }
+    session{
+        height:calc(100% - 150px);
+        font-size:0;
+    }
+    session aside{
+        display: inline-block;
+        width:200px;
+        height:100%;
+        background-color:purple;
+    }
+    session main{
+        display: inline-block;
+        width:calc(100% - 200px);
+        height:100%;
+        background-color: yellow;
+    }
+
+</style>
+<body>
+    <div>
+        <header></header>
+        <session>
+          <aside></aside>
+          <main></main>
+        </session>
+      </div>
+</body>
+</html>

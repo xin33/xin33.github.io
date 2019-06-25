@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<style>
+    ul{
+        list-style-type: none;
+        padding: 0px;
+        position:absolute;
+        font-size: 24px;
+        background-color:rgb(96,93,100);
+        float: left;
+    }
+    ul ul li{
+        display: none;
+    }
+    ul ul{
+        position:absolute;
+        top:0;
+        left:100%;
+        
+    }
+    ul ul::before {
+        content: '>';
+        position: absolute;
+        left:-1em; 
+    }
+    ul li{
+        position: relative;
+        white-space: nowrap;
+        padding-right: 40px;
+    }
+
+    li:hover >ul >li {
+        display: block;  
+    }
+   
+    li:hover{
+        background-color:rgb(255,103,0);
+    }
+    ul ul li{
+        /* opacity:0.3; */
+    }
+</style>
+<body>
+    <ul>
+        <li>手机 电话卡
+            <ul>
+                <li>小米9
+                    <ul>
+                        <li>全球首批骁龙855</li>
+                        <li>索尼4800万像素三摄</li>
+                        <li>超广角微距拍摄</li>
+                    </ul>
+                </li>
+                <li>小米8青春版
+                    <ul>
+                        <li>潮流镜面渐变色</li>
+                        <li>索尼2400万自拍旗舰</li>
+                        <li>骁龙660AIE处理器</li>
+                    </ul>
+                </li>
+                <li>小米MAX3</li>
+            </ul>
+        </li>
+        <li>电视 盒子
+            <ul>
+                <li>激光投影电视</li>
+                <li>小米全面屏电视</li>
+                <li>小米壁画电视</li>
+            </ul>
+        </li>
+        <li>笔记本 平板
+            <ul>
+                <li>小米游戏本</li>
+                <li>小米平板4</li>
+            </ul>
+        </li>
+        <li>家电 插线板</li>
+    </ul>
+</body>
+</html>
