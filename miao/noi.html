@@ -154,6 +154,17 @@ console.log(A + B)
         console.log(- n.toFixed(2));
     }
 </script>
+<script type="x" id="ch0104/03">
+    var n = Number(prompt("n"))
+    if (n % 2 == 0) 
+    {
+        console.log("even"); 
+    } 
+    else
+    {
+        console.log("odd");
+    }
+</script>
 <script type="x" id="ch0104/04">
     var str = prompt("str")
     if (str.charCodeAt() % 2 != 0) 
@@ -312,7 +323,7 @@ console.log(A + B)
     var a = Number(prompt("a"))
     var b = Number(prompt("b"))
     var c = Number(prompt("c"))
-    if(a + b > c && a + c > b && b + c > a && Math.abs(a - b) < c && Math.abs(a - c) < b && Math.abs(b - c) < a)
+    if(a + b > c && a + c > b && b + c > a) //&& Math.abs(a - b) < c && Math.abs(a - c) < b && Math.abs(b - c) < a)
     {
         console.log("YES")
     }
@@ -366,7 +377,7 @@ console.log(A + B)
         default : console.log("Invalid operator!")
     }
 </script>
-<script type="x" id="ch0104/20">
+<script type="" id="ch0104/20">
     var a = Number(prompt("a"))
     var b = Number(prompt("b"))
     var c = Number(prompt("c"))
@@ -423,7 +434,7 @@ console.log(A + B)
     {
         sum += Number(prompt("sum" + i) )
     }
-    console.log((sum / n).toFixed(5))
+    console.log((sum / n).toFixed(4))
 </script>
 <script type="x" id="ch0105/04">
     var n = Number(prompt("n"))
@@ -648,7 +659,7 @@ console.log(A + B)
     }
     console.log("End")
 </script>
-<script type="x" id="ch0105/22">
+<script type="x" id="ch0105/222">
     var a = 300 
     var b = Number(prompt("1月预算"))
     var c = 100 * Math.floor(0.01 * (a - b))
@@ -704,7 +715,7 @@ console.log(A + B)
     }
     console.log(t)
 </script>
-<script type="x" id="ch0105/25">
+<script type="x" id="ch0105/255">
     for(var i = 49;i < 728; i++)
     {
         var a1 = i % 7
@@ -794,7 +805,7 @@ console.log(A + B)
         console.log("NO")
     }    
 </script>
-<script type="x" id="ch0105/31">
+<script type="x" id="ch0105/311">
     var N = Number(prompt("N"))
     var M = Number(prompt("M"))
     for(var i = 1 ;i <= N ;i++)
@@ -877,7 +888,7 @@ console.log(A + B)
     }
     console.log(n)
 </script>
-<script type="x" id="ch0105/38">
+<script type="x" id="ch0105/388">
     var n = Number(prompt("n"))
     for(var i = n ; i >= 0 ;i--)
     {
@@ -944,7 +955,7 @@ console.log(A + B)
     }
     console.log(t)
 </script>
-<script type="xxx" id="ch0105/42">
+<script type="xxx" id="ch0105/422">
     var x = Number(prompt("x")) 
     var y = Number(prompt("y")) 
     var m = prompt("m")
@@ -984,7 +995,7 @@ console.log(A + B)
     }
     console.log(p)
 </script>
-<script type="x" id="ch0105/44">
+<script type="x" id="ch0105/444">
     var n = Number(prompt("n")) 
     var c = 0
     for(var i = 2 ;i <= 10000; i++)
