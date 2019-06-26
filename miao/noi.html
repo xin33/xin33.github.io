@@ -377,7 +377,7 @@ console.log(A + B)
         default : console.log("Invalid operator!")
     }
 </script>
-<script type="" id="ch0104/20">
+<script type="x" id="ch0104/20">
     var a = Number(prompt("a"))
     var b = Number(prompt("b"))
     var c = Number(prompt("c"))
@@ -390,16 +390,14 @@ console.log(A + B)
     }
     else if(s > 0)
     {
-        console.log("x1=" + x1.toFixed(5))
-        console.log("x2=" + x2.toFixed(5))
+        console.log("x1=" + x1.toFixed(5) + ";" + "x2=" + x2.toFixed(5))
     }
     else if (s < 0)
     {
         var m = -b / (2 * a)
         var n = Math.sqrt(4 *a *c - b * b) / (2 * a)
         var i
-        console.log("x1=" + m.toFixed(5) + "+" + n.toFixed(5) + "i" )
-        console.log("x2=" + m.toFixed(5) + "-" + n.toFixed(5) + "i" )
+        console.log("x1=" + m.toFixed(5) + "+" + n.toFixed(5) + "i" + ";" + "x2=" + m.toFixed(5) + "-" + n.toFixed(5) + "i" )
     }
 </script>
 <script type="x" id="ch0104/21">
@@ -1029,6 +1027,233 @@ console.log(A + B)
         n -= i
     }
     console.log(sum);
+</script>
+<script type="x" id="7">
+    var n = Number(prompt("n")) 
+    var t = 0
+    if(n % 7 == 0 || judge(n) == 1)
+    {
+        console.log("YES")
+    }
+    else{
+        console.log("NO")
+    }
+
+    function judge(n) 
+    {
+        while(n > 0)
+        {
+            var m = n % 10
+            n = (n - m) / 10
+            if(m == 7)
+            {
+                t = 1
+                break
+            }
+        }
+        return t
+    }
+</script>
+
+<script type="x" id="sort">
+    var a = Number(prompt("a"))
+    var b = Number(prompt("b"))
+    var c = Number(prompt("c"))
+    var str = ""
+    if(a < b && a < c)
+    {
+        if(b < c)
+        str = a + " " + b + " " + c
+        else 
+        str = a + " " + c + " " + b
+    }
+    else if(b < a && b < c)
+    {
+        if(a < c)
+        str = b + " " + a + " " + c
+        else 
+        str = b + " " + c + " " + a
+    }
+    else if(c < a && c < b)
+    {
+        if(a < b)
+        str = c + " " + a + " " + b
+        else 
+        str = c + " " + b + " " + a
+    }
+    console.log(str)
+</script>
+
+<script type="x" id="narcissistic">
+    var n = Number(prompt("n"))
+    function isnar(n)
+    {
+        var m,sum = 0
+        while(n > 0)
+        {
+            m = n % 10
+            n = (n - m) / 10 
+            sum += m * m * m 
+        }
+        return(sum)
+    }
+    if(isnar(n) == n)
+        console.log("YES")
+    else{
+        console.log("NO")
+    }   
+</script>
+<script type="x" id="narcissistics">
+    for(var i = 100 ;i <= 1000; i++)
+    {
+        if(isnar(i))
+            console.log(i)
+    }
+    function isnar(n)
+    {
+        var m,sum = 0
+        var a = n
+        while(n > 0)
+        {
+            m = n % 10
+            n = (n - m) / 10 
+            sum += m * m * m 
+        }
+        if(sum == a)
+            return 1
+        else
+            return 0      
+    }
+</script>
+<script type="x" id="palindrom">
+    var n = Number(prompt("n"))
+    var str = ""
+    function ispalindrom(n)
+    {
+        var m
+        while(n > 0)
+        {
+            m = n % 10
+            n = (n - m) / 10 
+            str += m + "" 
+        }
+        return Number(str)
+    }
+    if(ispalindrom(n) == n)
+        console.log("YES")
+    else{
+        console.log("NO")
+    }   
+</script>
+<script type="x" id="complete-number">
+    var n = Number(prompt("n"))
+    function iscomplete(n)
+    {
+        var sum = 0
+        for(var i = 1 ;i < n ; i++)
+        {
+            if(n % i == 0)
+            {
+                sum += i
+            }
+        }
+        if( sum == n)
+            return 1
+        else
+            return 0
+    }
+    if(iscomplete(n))
+        console.log("YES")
+    else{
+        console.log("NO")
+    }   
+</script>
+<script type="x" id="complete-numbers">
+    function iscomplete(n)
+    {
+        var sum = 0
+        for(var i = 1 ;i < n ; i++)
+        {
+            if(n % i == 0)
+            {
+                sum += i
+            }
+        }
+        if( sum == n)
+            return 1
+        else
+            return 0
+    }
+    for(var a = 1; a <= 1000; a++)
+    {
+        if(iscomplete(a))
+            console.log(a)
+    }
+</script>
+<script type="x" id="prime">
+    var n = Number(prompt("n"))
+    if(isprime(n))
+        console.log("YES")
+    else
+        console.log("NO")
+    function isprime(n) 
+    {
+        for(var i = 2; i < n; i++)
+        {
+            var t = 0
+            if(n % i == 0)
+                break
+            else
+                t = 1   
+        }      
+        if(n == 2 )
+            t = 1
+        return t 
+    }
+</script>
+<script type="x" id="primes">
+    for(var j = 2 ;j <= 100 ;j++)
+    {
+        if(isprime(j))
+        console.log(j)
+    }
     
+    function isprime(n) 
+    {
+        for(var i = 2; i < n; i++)
+        {
+            var t = 0
+            if(n % i == 0)
+                break
+            else
+                t = 1   
+        }      
+        if(n == 2 )
+            t = 1
+        return t 
+    }
+</script>
+<script type="x" id="itob">
+    var n = Number(prompt("n"))
+    var str = n + ""
+    console.log(str)
+</script>
+<script type="x" id="lcf&lcm">
+    var m = Number(prompt("m"))
+    var n = Number(prompt("n"))
+    var t,a = m,b = n
+    while(m % n != 0)
+    {
+        t = m % n
+        m = n
+        n = t
+    }
+    var lcf = n
+    var lcm = a * b / n
+    console.log(lcf , lcm)
+</script>
+<script type="x" id="sqrt">
+    var n = Number(prompt("n"))
+    console.log((n * n).toFixed(3))
 </script>
 
