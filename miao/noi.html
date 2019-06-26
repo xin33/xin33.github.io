@@ -1250,10 +1250,40 @@ console.log(A + B)
     }
     var lcf = n
     var lcm = a * b / n
-    console.log(lcf , lcm)
+    console.log(lcf)
+    console.log(lcm)
 </script>
 <script type="x" id="sqrt">
     var n = Number(prompt("n"))
-    console.log((n * n).toFixed(3))
+    var a = 0,b = n
+    var t = n / 2
+    if(t * t != n)
+    {
+        if(t * t > n)
+            b = t
+        else
+            a = t 
+        t = (a + b ) / 2
+    }
+    console.log(t.toFixed(3))
 </script>
+<script type="x" id="5">
+    var n = Number(prompt("n"))
+    var str = ""
+    var m = 0
+    while(n > 0)
+    {
+        m = n % 5
+        n = (n - m) / 5
+        str = str + m + ""
+    }
+    console.log(str)
+</script>
+<script type="" id="">
+</script>
+
+
+
+
+
 
