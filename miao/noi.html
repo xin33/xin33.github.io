@@ -1281,9 +1281,65 @@ console.log(A + B)
 </script>
 <script type="" id="">
 </script>
+<script>/*
+var x = Number(prompt("x"))
+var y = Number(prompt("y"))
+var hammingDistance = function(x, y) {
+    x = two(x)
+    y = two(y)
+    var count = 0
+    for(var j = 1; j <= Math.abs(x.length - y.length);j++)
+    {
+        if(x.length > y.length)
+                y = y + "0" 
+        else if(x.length < y.length)
+            x = x +"0"
+    }
+    for(var i = 0 ; i < Math.max(x.length,y.length) ; i++)
+    {
+        if(x.charAt(i) != y.charAt(i))
+            count++ 
+    }   
+    return count
+};
+function two(a)
+{
+    var m
+    var str = ""
+    if(a == 0)
+        str = "0" 
+    while(a)
+    {
+        m = a % 2
+        a = (a - m) / 2
+        str += m + ""
+    }
+    return str
+}
+
+   
+};
 
 
+</script>
 
+<script>
 
-
-
+var x =Number(prompt())
+var y =Number(prompt())
+    x = x.toString(2)
+    y = y.toString(2)
+    var a = x.length
+    var b = y.length
+    for(var j = 1; j <= Math.abs(a - b);j++)
+    {
+        if(a > b)
+                y = y + "0" 
+        else if(a < b)
+            x = "0" + x
+    }
+ console.log(x,y)
+console.log('');
+for(var i = 1 ;i < n ; i++)
+var n = Number(prompt('')
+</script>
