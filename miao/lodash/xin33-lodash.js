@@ -10,8 +10,8 @@ var xin33 = {
     }
     return result
   },
-  difference:function(ary , values){
-    return ary.filter(it => values.indexOf(it) == -1)
+  difference:function(ary , ...values){
+    var value = values.reduce((value , cur) => {return value.concat(cur)},[])
+    return ary.filter(it => value.indexOf(it) == -1)
   },
-  
 }
