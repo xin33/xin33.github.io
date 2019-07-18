@@ -14,4 +14,16 @@ var xin33 = {
     var value = values.reduce((value , cur) => {return value.concat(cur)},[])
     return ary.filter(it => value.indexOf(it) == -1)
   },
+  drop:function(ary, n = 1){
+    ary.splice(0 , n)
+    return ary
+  },
+  dropRight:function(ary , n = 1){
+    var l = ary.length
+    if(n > l)
+      l = n
+    ary.splice(l - n , n)
+    return ary
+  }
+
 }
