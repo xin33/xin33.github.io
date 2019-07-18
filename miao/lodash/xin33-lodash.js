@@ -6,7 +6,7 @@ var xin33 = {
   chunk:function(ary , size){
     var result = []
     while(ary.length){
-      result.concat(ary.splice(0 ,size))
+      result.push(ary.splice(0 ,size))
     }
     return result
   },
