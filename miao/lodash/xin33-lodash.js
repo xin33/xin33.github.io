@@ -24,6 +24,43 @@ var xin33 = {
       l = n
     ary.splice(l - n , n)
     return ary
-  }
+  },
+  flatten:function(ary){
+    var res = []
+    for(var item of ary){
+      if(Array.isArray(item)){
+        res.push(...item)
+      }else{
+        res.push(item)
+      }
+    }
+    return res
+  },
+  flattenDeep:function(ary){
+    var res = []
+    for(var item of ary){
+      if(Array.isArray(item)){
+        var flaitem = flattenDeep(item)
+        res.push(...flaitem)
+      }else{
+        res.push(item)
+      }
+    }
+    return res
+  },
+  flattenDepth:function(ary , depth = 1){
+    if(!depth)
+      return ary.slice()
+    var res = []
+    for(var item of ary){
+      if(Array.isArray(item)){
+        var flaitem = flattenDeep(item ,depth - 1)
+        res.push(...flaitem)
+      }else{
+        res.push(item)
+      }
+    }
+    return res
+  },
 
 }
