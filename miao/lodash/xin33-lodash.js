@@ -54,7 +54,7 @@ var xin33 = {
     var res = []
     for(var item of ary){
       if(Array.isArray(item)){
-        var flaitem = flattenDeep(item ,depth - 1)
+        var flaitem = flattenDepth(item ,depth - 1)
         res.push(...flaitem)
       }else{
         res.push(item)
